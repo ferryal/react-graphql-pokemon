@@ -1,0 +1,35 @@
+{
+  "extends": ["airbnb", "react-app"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "document": false
+  },
+  "plugins": ["eslint-plugin-you-dont-need-lodash-underscore"],
+  "parser": "babel-eslint",
+  "rules": {
+    "indent": ["error", 2],
+    "max-len": "off",
+    "consistent-return": "off",
+    "no-underscore-dangle": "off",
+    "class-methods-use-this": "off",
+    "camelcase": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/no-noninteractive-tabindex": "off",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "react/no-array-index-key": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/destructuring-assignment": "off",
+    "react/button-has-type": "off",
+    "react/forbid-prop-types": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "react/prefer-stateless-function": "off",
+    "react-hooks/exhaustive-deps": "off"
+  }
+}

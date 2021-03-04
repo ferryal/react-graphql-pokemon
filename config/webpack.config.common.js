@@ -38,7 +38,7 @@ const commonConfig = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(jpg|png|gif|svg|pdf|ico)$/,
+        test: /\.(jpg|png|gif|svg|pdf|ico|mp3)$/,
         loader: require.resolve('file-loader'),
         options: {
           limit: 10000,

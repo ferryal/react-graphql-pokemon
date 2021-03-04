@@ -3,10 +3,13 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { jsx, css, keyframes } from '@emotion/react';
+import useSound from 'use-sound';
 import {
   Layout, Card, Navbar, Modal, Button, Badge, Loading,
 } from '../../components';
 import { GET_DETAIL_POKEMON } from '../../GraphQL/Queries';
+import sfx from '../../assets/i-caught-you.mp3';
+import sfxCaught from '../../assets/caught-a-pokemon.mp3';
 
 const bounceAnimation = keyframes`
   0% {
@@ -32,6 +35,8 @@ const bounceAnimation = keyframes`
 const PokemonDetail = () => {
   const [isPokemonCaught, setIsPokemonCaught] = useState(null);
   const { name } = useParams();
+  const [play] = useSound(sfx);
+  const [playOther] = useSound(sfxCaught);
 
   const { loading, error, data: pokemonDetail } = useQuery(GET_DETAIL_POKEMON, {
     variables: { name },
@@ -42,6 +47,8 @@ const PokemonDetail = () => {
 
   const getProbabilityCatch = () => {
     const randomCatch = Math.floor(Math.random() * 100) + 1;
+    play();
+    playOther();
     setIsPokemonCaught(randomCatch);
   };
 

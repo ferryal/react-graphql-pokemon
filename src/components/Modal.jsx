@@ -4,7 +4,7 @@ import localforage from 'localforage';
 import { useHistory } from 'react-router-dom';
 import { jsx, css } from '@emotion/react';
 import { Button } from '../components';
-import PikachuSad from '../assets/pikachu-sad.png'
+import PikachuSad from '../assets/pikachu-sad.png';
 
 const Modal = (props) => {
   const {
@@ -139,7 +139,17 @@ const Modal = (props) => {
               color: #db6969;
               text-align: center;
             `}></p>
-            {(nickname.length > 0) && (<Button onClick={validateNickname} text="Confirm catch" />)}
+            {(nickname.length > 0) && (
+              <Button 
+                onClick={validateNickname} 
+                css={css`
+                  border-radius: 5px;
+                  background-color: #03ac0d;
+                  color: #fff;
+                  border: none;
+                  `} 
+                text="Confirm catch" />
+            )}
             </>
         )}
       </div>

@@ -42,6 +42,8 @@ run http://localhost:3000/
 
 [https://react-graphql-pokemon.vercel.app/](https://react-graphql-pokemon.vercel.app/)
 
+[https://react-graphql-pokemon.netlify.app/](https://react-graphql-pokemon.netlify.app/)
+
 ### Lighthouse Report
 
 [See the report](https://drive.google.com/file/d/1HFDaoxxQX-9sxGqFzbdaqI7IXbCH3ftN/view?usp=sharing)

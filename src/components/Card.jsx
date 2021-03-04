@@ -61,12 +61,22 @@ const Card = (props) => {
                       fontSize: '0.8rem',
                       textTransform: 'capitalize',
                       paddingTop: '0.3rem',
-                      marginBottom: '0.8rem',
+                      marginBottom: '1rem',
                     }}
                     >
                       owned total:
                       {' '}
-                      {count}
+                      <span css={{
+                        padding: '1px 5px',
+                        fontSize: '15px',
+                        backgroundColor: '#ff0400',
+                        color: '#fff',
+                        borderRadius: '15px',
+                        fontSize: '16px',
+                      }}
+                      >
+                        {count}
+                      </span>
                     </div>
                   )}
                 </div>
